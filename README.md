@@ -1,5 +1,5 @@
 # Custom DotFiles
-This repository contains my own customization for vim, oh-my-zsh & tmux in Mac enviroment. I hope this will be usefull for you. 👨🏻‍💻
+This repository contains my own customization for vim, oh-my-zsh & tmux. I hope this will be usefull for you. 👨🏻‍💻
 
 ![](images/Terminal.png)
 

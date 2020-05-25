@@ -100,7 +100,8 @@ source $ZSH/oh-my-zsh.sh
 
 alias ll="ls -la"
 alias ..="cd .."
-
+alias pf="top -o vsize"
+alias vs="code ."
 # change prompt
 prompt_context() {
   prompt_segment $PRIMARY_FG default  ""

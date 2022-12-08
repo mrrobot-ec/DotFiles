@@ -9,7 +9,6 @@
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "files.trimTrailingWhitespace": true,
-  "window.zoomLevel": 0,
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.fontFamily": "Meslo LG S for Powerline",
   "[javascript]": {
@@ -17,15 +16,14 @@
   },
   "git.suggestSmartCommit": false,
   "prettier.arrowParens": "avoid",
-  "prettier.packageManager": "yarn",
+
   "prettier.singleQuote": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": true,
-  "prettier.printWidth": 90,
+  "prettier.printWidth": 110,
   "terminal.integrated.shell.osx": "/bin/zsh",
   "files.autoSave": "onWindowChange",
-
   //dart configs
   "dart.autoImportCompletions": false,
   "dart.devToolsTheme": "dark",
@@ -37,21 +35,17 @@
     // (like `;` and `}`).
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-
     // Draw a guide line at 80 characters, where Dart's formatting will wrap code.
     "editor.rulers": [80],
-
     // Disables built-in highlighting of words that match your selection. Without
     // this, all instances of the selected text will be highlighted, interfering
     // with Dart's ability to highlight only exact references to the selected variable.
     "editor.selectionHighlight": false,
-
     // By default, VS Code prevents code completion from popping open when in
     // "snippet mode" (editing placeholders in inserted code). Setting this option
     // to `false` stops that and allows completion to open as normal, as if you
     // weren't in a snippet placeholder.
     "editor.suggest.snippetsPreventQuickSuggestions": false,
-
     // By default, VS Code will pre-select the most recently used item from code
     // completion. This is usually not the most relevant item.
     //
@@ -59,32 +53,59 @@
     // "recentlyUsedByPrefix" will filter the recently used items based on the
     //     text immediately preceeding where completion was invoked.
     "editor.suggestSelection": "first",
-
     // Allows pressing <TAB> to complete snippets such as `for` even when the
     // completion list is not visible.
     "editor.tabCompletion": "onlySnippets",
-
     // By default, VS Code will populate code completion with words found in the
     // current file when a language service does not provide its own completions.
     // This results in code completion suggesting words when editing comments and
     // strings. This setting will prevent that.
     "editor.wordBasedSuggestions": false,
-
     // Force all files to have a trailing newline for consistency and reduced diffs
     // when adding new lines at the bottom of the file.
     "files.insertFinalNewline": true
   },
-  "workbench.colorTheme": "Community Material Theme Ocean",
+  "workbench.colorTheme": "Community Material Theme Palenight",
   "workbench.colorCustomizations": {
     "editorLineNumber.foreground": "#924343",
     "editorLineNumber.activeForeground": "#ff0000",
     "editorWarning.border": "#fd6601",
     "editorError.border": "#ff0000",
-    "editorSuggestWidget.highlightForeground": "#924343",
     "editorSuggestWidget.selectedBackground": "#726e6e"
   },
   "editor.tokenColorCustomizations": {
     "comments": "#924343"
+  },
+  "python.pythonPath": "/usr/bin/python3",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": null
+    }
+  ],
+  "colorize.languages": ["typescript", "javascript", "javascriptreact", "css", "scss"],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "yaml.schemas": {
+    "file:///Users/mrrobot/.vscode/extensions/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.jira.jqlList": [
+    {
+      "id": "2c6d8469-3434-479d-a2c0-f36f122896bf",
+      "enabled": true,
+      "name": "My simetrikinc Issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "siteId": "2aa4bead-e466-4c9a-a7aa-5d8e2a11ccff",
+      "monitor": true
+    }
+  ],
+  "redhat.telemetry.enabled": false,
+  "editor.detectIndentation": true,
+  "editor.rulers": [
+    120
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
-

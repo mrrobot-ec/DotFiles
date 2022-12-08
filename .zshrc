@@ -100,10 +100,50 @@ source $ZSH/oh-my-zsh.sh
 
 alias ll="ls -la"
 alias ..="cd .."
-alias pf="top -o vsize"
 alias vs="code ."
+alias pf="top -o vsize"
+alias mint="ssh mrrobot@192.168.56.102 -p 22"
+
+#NVM config
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#MAVEN
+export PATH="$HOME/Library/apache-maven-3.8.6/bin:$PATH"
+
 # change prompt
 prompt_context() {
-  prompt_segment $PRIMARY_FG default  ""
+#  prompt_segment $PRIMARY_FG default  ""
+  prompt_segment $PRIMARY_FG default  "%2~"
 }
 
+prompt_end() {
+  if [[ -n $CURRENT_BG ]]; then
+      print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+  else
+      print -n "%{%k%}"
+  fi
+
+  print -n "%{%f%}"
+  CURRENT_BG='' 
+
+  #Adds the new line and ➜ as the start character.
+  printf "\n ➜";
+}
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+# GO
+export GOPATH="${HOME}/go"
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+export JAVA_HOME=$(/usr/libexec/java_home)
